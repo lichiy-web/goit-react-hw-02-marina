@@ -2,19 +2,14 @@
 import clsx from 'clsx';
 import css from './Profile.module.css';
 
-export default function Profile({ name, tag, location, image, stats }) {
+const Profile = ({ name, tag, location, image, stats }) => {
   return (
     <>
-    <header> 
-      <div>
-        <h1>Vite + React</h1>
-      </div>
-     </header>
     <div className={clsx('container', css.hero_container)}>
       <div className={clsx(css.user_data)}>
-        <img src={image} alt="User avatar" className={clsx(css.img)} />
+        <img src={image} alt="User avatar" width="150" className={clsx(css.img)} />
         <p>{name}</p>
-        <p>{tag}</p>
+        <p>@{tag}</p>
         <p>{location}</p>
       </div>
       <ul>
@@ -34,4 +29,6 @@ export default function Profile({ name, tag, location, image, stats }) {
     </div>
     </>
   );
-};
+}
+
+export default Profile
