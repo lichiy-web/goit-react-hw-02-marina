@@ -1,7 +1,7 @@
 // import React from 'react';
 import clsx from 'clsx';
-import FriendListItem from '../FriendListItem/FriendListItem'
-import css from '../FriendList/FriendList.module.css';
+import FriendListItem from '../friendListItem/FriendListItem'
+import css from './FriendList.module.css';
 
 
 export default function FriendList ({ friends }) {
