@@ -8,7 +8,7 @@ import transactions from './transactions.json'
 import Header from './components/Header/Header'
 import Profile from './components/Profile/Profile'
 import FriendList from './components/FriendList/FriendList'
-import TransactionHistory from './components/transactionHistory/TransactionHistory'
+import TransactionHistory from './components/TransactionHistory/TransactionHistory'
 
 function App() {
   return (

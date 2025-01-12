@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import clsx from 'clsx';
-import FriendListItem from '../friendListItem/FriendListItem'
+import FriendListItem from '../FriendListItem/FriendListItem'
 import css from './FriendList.module.css';
 
 
