@@ -1,4 +1,4 @@
-// import Header from './components/Header/Header'
+import Header from './components/Header/Header'
 import Profile from './components/Profile/Profile'
 import FriendList from './components/FriendList/FriendList'
 import TransactionHistory from './components/TransactionHistory/TransactionHistory'
@@ -10,7 +10,7 @@ import transactions from './transactions.json'
 function App() {
   return (
     <>
-    {/* <Header /> */}
+    <Header />
      <Profile 
         name={userData.username}
         tag={userData.tag}
