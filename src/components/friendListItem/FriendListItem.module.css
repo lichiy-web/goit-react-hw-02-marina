@@ -1,0 +1,22 @@
+.friends {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5 px;
+}
+
+.friends > :nth-child(2) {
+  color: #000000;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.online {
+  color: #008001;
+}
+
+.offline {
+  color: #ff0000;
+}

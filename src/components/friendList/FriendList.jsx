@@ -3,17 +3,18 @@ import clsx from 'clsx';
 import FriendListItem from '../FriendListItem/FriendListItem'
 import css from '../FriendList/FriendList.module.css';
 
-const FriendList = ({ friends }) => {
+
+export default function FriendList ({ friends }) {
   return (
-    <ul className={clsx('container', css.friendsСontainer)}>
+    <ul className={clsx('container', css.friends_container)}>
       {friends.map(friend => {
         return (
           <li key={friend.id}>
             <FriendListItem
               avatar={friend.avatar}
               name={friend.name}
-              isOnline={friend.isOnline}
-            />
+              isOnline={friend.isOnline}>
+              </FriendListItem>
           </li>
         );
       })}
@@ -21,4 +22,4 @@ const FriendList = ({ friends }) => {
   );
 };
 
-export default FriendList;
+// export default FriendList;

@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import css from './TransactionHistory.module.css';
 
-const TransactionHistory = ({ transactions }) => {
+export default function TransactionHistory ({ transactions }) {
   return (
     <table className={clsx(css.thTable)}>
       <thead className={clsx(css.thTableHeader)}>
@@ -28,5 +28,5 @@ const TransactionHistory = ({ transactions }) => {
   );
 };
 
-export default TransactionHistory;
+// export default TransactionHistory;
 

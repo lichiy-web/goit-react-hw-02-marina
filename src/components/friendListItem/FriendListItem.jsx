@@ -4,7 +4,7 @@ import css from './FriendListItem.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div className={clsx(css.friend)}>
+    <div className={clsx(css.friends)}>
       <img src={avatar} alt="Avatar" width="48" />
       <p>{name}</p>
       {isOnline ? (
@@ -14,6 +14,6 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
       )}
     </div>
   );
-}
+};
 
-export default FriendListItem
+export default FriendListItem;

@@ -2,17 +2,17 @@
 import clsx from 'clsx';
 import css from './Profile.module.css';
 
-const Profile = ({ name, tag, location, image, stats }) => {
+export default function Profile ({ name, tag, location, image, stats }) {
   return (
     <>
-    <div className={clsx('container', css.hero_container)}>
+    <div className={clsx('container', css.profile_container)}>
       <div className={clsx(css.user_data)}>
         <img src={image} alt="User avatar" width="150" className={clsx(css.img)} />
         <p>{name}</p>
         <p>@{tag}</p>
         <p>{location}</p>
       </div>
-      <ul>
+      <ul className={css.profile_list}>
         <li>
           <span>Followers</span>
           <span>{stats.followers}</span>
@@ -31,4 +31,4 @@ const Profile = ({ name, tag, location, image, stats }) => {
   );
 }
 
-export default Profile
+// export default Profile
