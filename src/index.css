@@ -67,19 +67,17 @@ button:focus-visible {
   max-width: 375px;
   width: 100%;
   margin: 0 auto;
-  /* padding: 0 16px; */
+}
 
-}@media (min-width: 768px) {
+@media (min-width: 768px) {
   .container {
     max-width: 768px;
-    /* padding: 0 32px; */
   }
 }
 
 @media (min-width: 1440px) {
   .container {
     max-width: 1440px;
-    /* padding: 0 32px; */
   }
 }
 
@@ -88,10 +86,4 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  /* a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  } */
 }
