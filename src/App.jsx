@@ -24,4 +24,17 @@ function App() {
   )
 };
 
+/**
+  const App = () => {
+	good: 0,
+	neutral: 0,
+	bad: 0
+};
+<Header />
+<Feedback /> 
+<Options />
+ *  */ 
+
+
+
 export default App;
