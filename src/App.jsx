@@ -1,40 +1,67 @@
+import { useEffect, useState } from 'react';
 import Header from './components/Header/Header'
-import Profile from './components/Profile/Profile'
-import FriendList from './components/FriendList/FriendList'
-import TransactionHistory from './components/TransactionHistory/TransactionHistory'
+import Description from './components/Description/Description';
+import Options from './components/Options/Options';
+import Feedback from './components/Feedback/Feedback';
+import Notification from './components/Notification/Notification';
 import './App.css'
-import userData from './userData.json'
-import friends from './friends.json'
-import transactions from './transactions.json'
 
-function App() {
+export default function App() {
+  const [clicks, setClicks] = useState(() => {
+    const savedFeedback = localStorage.getItem("saved-feedback-statistics");
+    if (savedFeedback !== null) {
+      return JSON.parse(savedFeedback);
+    }
+    return { good: 0, neutral: 0, bad: 0 };
+  });
+
+  const updateFeedback = (feedbackType) => {
+    setClicks({
+      ...clicks,
+      [feedbackType]: clicks[feedbackType] + 1,
+    });
+  };
+
+  const handleReset = () => {
+    setClicks({
+      ...clicks,
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    });
+  };
+
+  const totalFeedback = clicks.good + clicks.neutral + clicks.bad;
+  const positiveFeedback = Math.round((clicks.good / totalFeedback) * 100);
+
+  useEffect(() => {
+    localStorage.setItem("saved-feedback-statistics", JSON.stringify(clicks));
+  }, [clicks]);
+
   return (
-    <>
-    <Header />
-     <Profile 
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
+    <div>
+      <Header />
+      <Description />
+
+      <Options
+        onUpdate={updateFeedback}
+        onReset={handleReset}
+        showResetBtn={totalFeedback > 0}
       />
-     <FriendList friends = {friends}/>
-     <TransactionHistory transactions = {transactions}/>
-     </>
-  )
-};
 
-/**
-  const App = () => {
-	good: 0,
-	neutral: 0,
-	bad: 0
-};
-<Header />
-<Feedback /> 
-<Options />
- *  */ 
-
-
-
-export default App;
+      <div>
+        {!totalFeedback ? (
+          <Notification />
+        ) : (
+          <Feedback
+          good={clicks.good}
+          neutral={clicks.neutral}
+          bad={clicks.bad}
+            total={totalFeedback}
+            percentFeedback={positiveFeedback}
+          />
+        )}
+      </div>
+    </div>
+  );
+}

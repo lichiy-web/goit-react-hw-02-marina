@@ -5,3 +5,12 @@
   fill: rgb(0, 157, 255);
   width: 20px;
 }
+
+h2 {
+  background: linear-gradient(90deg, 
+              #5e065f, #f0f406, #970a99);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}

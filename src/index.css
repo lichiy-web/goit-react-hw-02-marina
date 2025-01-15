@@ -28,12 +28,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-size: 16px;
+  font-size: 20px;
   color: black;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 40px;
   line-height: 1.1;
 }
 
