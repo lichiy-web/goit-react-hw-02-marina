@@ -1,11 +1,11 @@
 {
-  "name": "goit-react-hw-01",
+  "name": "goit-react-hw-02",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/goit-react-hw-01/",
+    "build": "vite build --base=/goit-react-hw-02/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
