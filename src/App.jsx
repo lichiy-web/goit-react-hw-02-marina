@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import Header from './components/Header/Header'
-import Description from './components/Description/Description';
-import Options from './components/Options/Options';
-import Feedback from './components/Feedback/Feedback';
-import Notification from './components/Notification/Notification';
+import Description from './components/Description/Description'
+import Options from './components/Options/Options'
+import Feedback from './components/Feedback/Feedback'
+import Notification from './components/Notification/Notification'
 import './App.css'
 
 export default function App() {

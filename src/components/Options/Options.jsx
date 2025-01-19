@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import s from './Options.module.css'
 
 export default function Options({ onUpdate, showResetBtn, onReset }) {

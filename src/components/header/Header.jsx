@@ -1,4 +1,4 @@
-import { FaReact } from "react-icons/fa6";
+import { FaReact } from "react-icons/fa6"
 import s from './Header.module.css'
 
 const Header = () => {
