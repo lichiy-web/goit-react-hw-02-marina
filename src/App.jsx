@@ -3,6 +3,7 @@ import Description from './components/Description/Description'
 import Options from './components/Options/Options'
 import Feedback from './components/Feedback/Feedback'
 import Notification from './components/Notification/Notification'
+import Chart from './components/Chart/Chart'
 import './App.css'
 
 export default function App() {
@@ -59,6 +60,7 @@ export default function App() {
             percentFeedback={positiveFeedback}
           />
         )}
+        <Chart data={clicks}  datasetsData={updateFeedback} />
       </div>
     </div>
   );
