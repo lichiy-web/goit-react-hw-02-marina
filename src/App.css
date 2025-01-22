@@ -7,3 +7,7 @@
   border-radius: 8px;
 }
 
+.feedbackWrapper {
+  display: flex;
+}
+
